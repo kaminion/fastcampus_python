@@ -26,4 +26,20 @@ print(df['이름'], df.그룹, df["소속사"])
 #iloc(position으로 색인)
 # print(df.iloc[:, [0, 2]])
 # iloc는 numpy와 동일하게 동작
-print(df.iloc[1:5, [0, 2]])
+#print(df.iloc[1:5, [0, 2]])
+
+
+# boolean indexing 
+# numpy에서 했던것과 동일 조건부 검색 시 boolean으로 리턴
+#print(df['키'] > 180)
+
+# 모든 컬럼을 출력하지 않으려면..
+
+print(df[df['키'] > 180]['이름'])
+print(df.loc[df['키'] > 180, '이름'])
+
+# isin 을 활용한 색인, column 지정해서 조건부 추출 가능
+my_condition = ['플레디스', 'SM']
+print(df['소속사'].isin(my_condition)) # boolean 출력
+
+print(df.loc[df['소속사'].isin(my_condition)])
