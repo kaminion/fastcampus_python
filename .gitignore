@@ -1,1 +1,3 @@
 /venv
+/data/*.csv
+/조짜기.py
