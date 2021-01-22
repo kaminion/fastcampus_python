@@ -24,3 +24,9 @@ print(df['키'].drop_duplicates(keep="last"))
 
 # 행 전체 중복을 검사
 print(df.drop_duplicates('그룹'))
+
+# drop을 사용하여 column 제거 (복수형은 [])
+print(df.drop('그룹', axis=1))
+
+# row 제거
+print(df.drop([3,5], axis=0))
