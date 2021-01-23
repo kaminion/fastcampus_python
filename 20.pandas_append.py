@@ -11,9 +11,10 @@ df = df.append({'이름':'테디', '그룹':'테디그룹',
 
 print(df.tail())
 
-# column 만들기 (실질적으로 값 넣어줘야함)
-df['국적'] = '대한민국'
-print(df.head())
+# column 만들기 (initiallize, 어떤 조건을 내걸든 적용되지않음, replace는 예외인듯)
+df['국적'] = False
+#print(df.head())
+# 초기화 후 넣어주어야 함, 3항 연산자같은것 사용 X
 df.loc[df['이름']=='지드래곤', '국적'] = 'KOREA'
 
-print(df.head())
+print(df[['이름','국적']].head())
