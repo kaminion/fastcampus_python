@@ -2,3 +2,6 @@
 /data/*.csv
 /조짜기.py
 /chromedriver.exe
+/test_request.py
+/test*.py
+/cooking_box_concat.xlsx
